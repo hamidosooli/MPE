@@ -22,9 +22,13 @@ class Scenario(BaseScenario):
             if i < 2:
                 agent.color = np.array([0.9, 0.2, 0.5])
                 agent.team = 'A'
+                agent.max_speed=.5
+                agent.accel=.5
             else:
                 agent.color = np.array([0.35, 0.35, 0.85])
                 agent.team = 'B'
+                agent.max_speed=1
+                agent.accel=1
 
         # add landmarks
         world.landmarks = [Landmark() for i in range(num_landmarks)]
